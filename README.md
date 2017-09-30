@@ -1,0 +1,13 @@
+# DemoLucasBoard
+
+Programa ejemplo que corre sobre el stick LPC1769, compatible con placa base LucasBoard
+
+El Proyecto Demo1769_20161024 consiste en:
+
+- Aplicacion migrada de ProbadorModuloSim908_20160120 sobre LPC1114 para demo TD2
+- Perifericos en operacion:
+	- Display 1602 sobre TIMER1
+	- RS232 sobre UART3
+	- Teclado matricial 4x4 sobre TIMER0 (en desarrollo)
+
+Esta aplicacion corre en LPCXpresso LPC1769.
