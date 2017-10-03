@@ -38,7 +38,7 @@ int LED = 0 ;
  */
 void LED_Init(void){
 	/*Inicializar el puerto 22 como salida*/
-
+	ledtic = LEDTIC;
 	Chip_GPIO_SetDir(LPC_GPIO,0,22,1);
 }
 
@@ -79,4 +79,9 @@ void LED_Off (void)
 
 	/*APAGAR_LED Poner un "0" en el puerto 22*/
 	Chip_GPIO_SetPinOutLow(LPC_GPIO,0,22);
+}
+
+void LED_DecLedTic(void)
+{
+	if(ledtic) ledtic--;
 }

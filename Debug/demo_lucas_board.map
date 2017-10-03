@@ -369,34 +369,9 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/LED.o
  .data          0x00000000        0x0 ./src/LED.o
  .bss           0x00000000        0x0 ./src/LED.o
- .text.Chip_GPIO_SetPinDIROutput
-                0x00000000       0x38 ./src/LED.o
- .text.Chip_GPIO_SetPinDIRInput
-                0x00000000       0x3c ./src/LED.o
- .text.Chip_GPIO_SetPinDIR
-                0x00000000       0x44 ./src/LED.o
- .text.Chip_GPIO_SetDir
-                0x00000000       0x34 ./src/LED.o
- .text.Chip_GPIO_SetPinOutHigh
-                0x00000000       0x2c ./src/LED.o
- .text.Chip_GPIO_SetPinOutLow
-                0x00000000       0x2c ./src/LED.o
- .bss.ledtic    0x00000000        0x4 ./src/LED.o
- .bss.LED       0x00000000        0x4 ./src/LED.o
- .text.LED_Init
-                0x00000000       0x18 ./src/LED.o
- .text.LED_Parpadeo
-                0x00000000       0x50 ./src/LED.o
  .text.LED_On   0x00000000       0x18 ./src/LED.o
  .text.LED_Off  0x00000000       0x18 ./src/LED.o
- .debug_info    0x00000000      0x3ff ./src/LED.o
- .debug_abbrev  0x00000000      0x186 ./src/LED.o
- .debug_aranges
-                0x00000000       0x68 ./src/LED.o
- .debug_ranges  0x00000000       0x58 ./src/LED.o
- .debug_macro   0x00000000      0x1d6 ./src/LED.o
  .debug_macro   0x00000000      0x88c ./src/LED.o
- .debug_macro   0x00000000       0x10 ./src/LED.o
  .debug_macro   0x00000000       0x10 ./src/LED.o
  .debug_macro   0x00000000      0x12d ./src/LED.o
  .debug_macro   0x00000000      0x5b2 ./src/LED.o
@@ -431,12 +406,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./src/LED.o
  .debug_macro   0x00000000       0xca ./src/LED.o
  .debug_macro   0x00000000       0x18 ./src/LED.o
- .debug_line    0x00000000      0x4ac ./src/LED.o
- .debug_str     0x00000000    0x107b4 ./src/LED.o
- .comment       0x00000000       0x6f ./src/LED.o
- .debug_frame   0x00000000      0x168 ./src/LED.o
- .ARM.attributes
-                0x00000000       0x33 ./src/LED.o
  .group         0x00000000        0x8 ./src/Pulsador.o
  .group         0x00000000        0x8 ./src/Pulsador.o
  .group         0x00000000        0x8 ./src/Pulsador.o
@@ -2138,7 +2107,7 @@ END GROUP
                 0x20084000                __top_RamAHB32 = 0x20084000
                 0x20084000                __top_RAM2 = 0x20084000
 
-.text           0x00000000     0x19e0
+.text           0x00000000     0x1bc4
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -2147,16 +2116,16 @@ END GROUP
                 0x000000cc                . = ALIGN (0x4)
                 0x000000cc                __section_table_start = .
                 0x000000cc                __data_section_table = .
-                0x000000cc        0x4 LONG 0x19e0 LOADADDR (.data)
+                0x000000cc        0x4 LONG 0x1bc4 LOADADDR (.data)
                 0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000d4        0x4 LONG 0x0 SIZEOF (.data)
-                0x000000d8        0x4 LONG 0x19e0 LOADADDR (.data_RAM2)
+                0x000000d8        0x4 LONG 0x1bc4 LOADADDR (.data_RAM2)
                 0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
                 0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x000000e4                __data_section_table_end = .
                 0x000000e4                __bss_section_table = .
                 0x000000e4        0x4 LONG 0x10000000 ADDR (.bss)
-                0x000000e8        0x4 LONG 0x50 SIZEOF (.bss)
+                0x000000e8        0x4 LONG 0x58 SIZEOF (.bss)
                 0x000000ec        0x4 LONG 0x2007c000 ADDR (.bss_RAM2)
                 0x000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x000000f4                __bss_section_table_end = .
@@ -2223,322 +2192,343 @@ END GROUP
  .text.TIMER1_IRQHandler
                 0x0000035c       0x30 ./src/LCD.o
                 0x0000035c                TIMER1_IRQHandler
- .text.Chip_RTC_GetTime
-                0x0000038c       0x20 ./src/RTC.o
- .text.Chip_RTC_ClearIntPending
-                0x000003ac       0x1c ./src/RTC.o
- .text.Chip_RTC_GetIntPending
-                0x000003c8       0x28 ./src/RTC.o
- .text.RTC_IRQHandler
-                0x000003f0       0x70 ./src/RTC.o
-                0x000003f0                RTC_IRQHandler
- .text.Chip_GPIO_SetPinState
-                0x00000460       0x68 ./src/Teclado.o
- .text.Chip_GPIO_WritePortBit
-                0x000004c8       0x2c ./src/Teclado.o
- .text.Chip_GPIO_GetPinState
-                0x000004f4       0x38 ./src/Teclado.o
- .text.Chip_TIMER_MatchPending
-                0x0000052c       0x34 ./src/Teclado.o
- .text.Chip_TIMER_ClearMatch
-                0x00000560       0x28 ./src/Teclado.o
- .text.Fila1_on
-                0x00000588       0x18 ./src/Teclado.o
- .text.Fila1_off
-                0x000005a0       0x18 ./src/Teclado.o
- .text.Fila2_on
-                0x000005b8       0x18 ./src/Teclado.o
- .text.Fila2_off
-                0x000005d0       0x18 ./src/Teclado.o
- .text.Fila3_on
-                0x000005e8       0x18 ./src/Teclado.o
- .text.Fila3_off
-                0x00000600       0x18 ./src/Teclado.o
- .text.Fila4_on
-                0x00000618       0x18 ./src/Teclado.o
- .text.Fila4_off
-                0x00000630       0x18 ./src/Teclado.o
- .text.Columna1
-                0x00000648       0x28 ./src/Teclado.o
- .text.Columna2
-                0x00000670       0x28 ./src/Teclado.o
- .text.Columna3
-                0x00000698       0x28 ./src/Teclado.o
- .text.Columna4
-                0x000006c0       0x28 ./src/Teclado.o
- .text.Teclado_Fila
-                0x000006e8       0x5c ./src/Teclado.o
- .text.Teclado_Columna
-                0x00000744       0x2c ./src/Teclado.o
- .text.TIMER0_IRQHandler
-                0x00000770      0x108 ./src/Teclado.o
-                0x00000770                TIMER0_IRQHandler
- .text.UART1_IRQHandler
-                0x00000878       0x20 ./src/UART.o
-                0x00000878                UART1_IRQHandler
- .text.NVIC_SetPriority
-                0x00000898       0x54 ./src/demo_lucas_board.o
- .text.SysTick_Config
-                0x000008ec       0x44 ./src/demo_lucas_board.o
- .text.SysTick_Handler
-                0x00000930        0xc ./src/demo_lucas_board.o
-                0x00000930                SysTick_Handler
- .text.CONTROL_BoardInit
-                0x0000093c       0x2c ./src/demo_lucas_board.o
-                0x0000093c                CONTROL_BoardInit
- .text.main     0x00000968        0xc ./src/demo_lucas_board.o
-                0x00000968                main
- .text.SystemInit
-                0x00000974       0x24 ./src/sysinit.o
-                0x00000974                SystemInit
- .text.Chip_IOCON_Init
-                0x00000998       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .text.Chip_GPIO_Init
-                0x000009b0       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .text.Chip_GPIO_SetPinState
-                0x000009c8       0x68 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .text.Chip_GPIO_WritePortBit
-                0x00000a30       0x2c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .text.Chip_GPIO_GetPinState
-                0x00000a5c       0x38 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .text.Chip_GPIO_ReadPortBit
-                0x00000a94       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_SetPinDIROutput
-                0x00000abc       0x38 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x0000038c       0x38 ./src/LED.o
  .text.Chip_GPIO_SetPinDIRInput
-                0x00000af4       0x3c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x000003c4       0x3c ./src/LED.o
  .text.Chip_GPIO_SetPinDIR
-                0x00000b30       0x44 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000400       0x44 ./src/LED.o
+ .text.Chip_GPIO_SetDir
+                0x00000444       0x34 ./src/LED.o
+ .text.Chip_GPIO_SetPinOutHigh
+                0x00000478       0x2c ./src/LED.o
+ .text.Chip_GPIO_SetPinOutLow
+                0x000004a4       0x2c ./src/LED.o
+ .text.LED_Init
+                0x000004d0       0x24 ./src/LED.o
+                0x000004d0                LED_Init
+ .text.LED_Parpadeo
+                0x000004f4       0x50 ./src/LED.o
+                0x000004f4                LED_Parpadeo
+ .text.LED_DecLedTic
+                0x00000544       0x24 ./src/LED.o
+                0x00000544                LED_DecLedTic
+ .text.Chip_RTC_GetTime
+                0x00000568       0x20 ./src/RTC.o
+ .text.Chip_RTC_ClearIntPending
+                0x00000588       0x1c ./src/RTC.o
+ .text.Chip_RTC_GetIntPending
+                0x000005a4       0x28 ./src/RTC.o
+ .text.RTC_IRQHandler
+                0x000005cc       0x70 ./src/RTC.o
+                0x000005cc                RTC_IRQHandler
+ .text.Chip_GPIO_SetPinState
+                0x0000063c       0x68 ./src/Teclado.o
+ .text.Chip_GPIO_WritePortBit
+                0x000006a4       0x2c ./src/Teclado.o
+ .text.Chip_GPIO_GetPinState
+                0x000006d0       0x38 ./src/Teclado.o
+ .text.Chip_TIMER_MatchPending
+                0x00000708       0x34 ./src/Teclado.o
+ .text.Chip_TIMER_ClearMatch
+                0x0000073c       0x28 ./src/Teclado.o
+ .text.Fila1_on
+                0x00000764       0x18 ./src/Teclado.o
+ .text.Fila1_off
+                0x0000077c       0x18 ./src/Teclado.o
+ .text.Fila2_on
+                0x00000794       0x18 ./src/Teclado.o
+ .text.Fila2_off
+                0x000007ac       0x18 ./src/Teclado.o
+ .text.Fila3_on
+                0x000007c4       0x18 ./src/Teclado.o
+ .text.Fila3_off
+                0x000007dc       0x18 ./src/Teclado.o
+ .text.Fila4_on
+                0x000007f4       0x18 ./src/Teclado.o
+ .text.Fila4_off
+                0x0000080c       0x18 ./src/Teclado.o
+ .text.Columna1
+                0x00000824       0x28 ./src/Teclado.o
+ .text.Columna2
+                0x0000084c       0x28 ./src/Teclado.o
+ .text.Columna3
+                0x00000874       0x28 ./src/Teclado.o
+ .text.Columna4
+                0x0000089c       0x28 ./src/Teclado.o
+ .text.Teclado_Fila
+                0x000008c4       0x5c ./src/Teclado.o
+ .text.Teclado_Columna
+                0x00000920       0x2c ./src/Teclado.o
+ .text.TIMER0_IRQHandler
+                0x0000094c      0x108 ./src/Teclado.o
+                0x0000094c                TIMER0_IRQHandler
+ .text.UART1_IRQHandler
+                0x00000a54       0x20 ./src/UART.o
+                0x00000a54                UART1_IRQHandler
+ .text.NVIC_SetPriority
+                0x00000a74       0x54 ./src/demo_lucas_board.o
+ .text.SysTick_Config
+                0x00000ac8       0x44 ./src/demo_lucas_board.o
+ .text.SysTick_Handler
+                0x00000b0c        0xc ./src/demo_lucas_board.o
+                0x00000b0c                SysTick_Handler
+ .text.CONTROL_BoardInit
+                0x00000b18       0x2c ./src/demo_lucas_board.o
+                0x00000b18                CONTROL_BoardInit
+ .text.main     0x00000b44       0x14 ./src/demo_lucas_board.o
+                0x00000b44                main
+ .text.SystemInit
+                0x00000b58       0x24 ./src/sysinit.o
+                0x00000b58                SystemInit
+ .text.Chip_IOCON_Init
+                0x00000b7c       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .text.Chip_GPIO_Init
+                0x00000b94       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .text.Chip_GPIO_SetPinState
+                0x00000bac       0x68 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .text.Chip_GPIO_WritePortBit
+                0x00000c14       0x2c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .text.Chip_GPIO_GetPinState
+                0x00000c40       0x38 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .text.Chip_GPIO_ReadPortBit
+                0x00000c78       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .text.Chip_GPIO_SetPinDIROutput
+                0x00000ca0       0x38 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .text.Chip_GPIO_SetPinDIRInput
+                0x00000cd8       0x3c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .text.Chip_GPIO_SetPinDIR
+                0x00000d14       0x44 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_GPIO_WriteDirBit
-                0x00000b74       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000d58       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Chip_UART_ConfigData
-                0x00000ba4       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000d88       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Board_LED_Init
-                0x00000bc0       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000da4       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .text.Board_UART_Init
-                0x00000bd8       0x14 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00000bd8                Board_UART_Init
+                0x00000dbc       0x14 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000dbc                Board_UART_Init
  .text.Board_Debug_Init
-                0x00000bec       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00000bec                Board_Debug_Init
+                0x00000dd0       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000dd0                Board_Debug_Init
  .text.Board_LED_Set
-                0x00000c1c       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00000c1c                Board_LED_Set
+                0x00000e00       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000e00                Board_LED_Set
  .text.Board_LED_Test
-                0x00000c4c       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00000c4c                Board_LED_Test
+                0x00000e30       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000e30                Board_LED_Test
  .text.Board_LED_Toggle
-                0x00000c7c       0x44 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00000c7c                Board_LED_Toggle
+                0x00000e60       0x44 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000e60                Board_LED_Toggle
  .text.Board_Init
-                0x00000cc0       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00000cc0                Board_Init
+                0x00000ea4       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000ea4                Board_Init
  .text.Chip_SYSCTL_SetFLASHAccess
-                0x00000ce4       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000ec8       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
  .text.Board_SetupMuxing
-                0x00000d14       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x00000d14                Board_SetupMuxing
+                0x00000ef8       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000ef8                Board_SetupMuxing
  .text.Board_SetupClocking
-                0x00000d30       0x14 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x00000d30                Board_SetupClocking
+                0x00000f14       0x14 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000f14                Board_SetupClocking
  .text.Board_SystemInit
-                0x00000d44       0x10 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x00000d44                Board_SystemInit
+                0x00000f28       0x10 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00000f28                Board_SystemInit
  .text.SystemCoreClockUpdate
-                0x00000d54       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
-                0x00000d54                SystemCoreClockUpdate
+                0x00000f38       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+                0x00000f38                SystemCoreClockUpdate
  .text.Chip_Clock_IsMainPLLEnabled
-                0x00000d6c       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00000f50       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_IsMainPLLConnected
-                0x00000d90       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00000f74       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_FeedPLL
-                0x00000db4       0x34 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00000f98       0x34 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetMainPLLSource
-                0x00000de8       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00000fcc       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetMainOscRate
-                0x00000e08       0x14 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00000fec       0x14 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetIntOscRate
-                0x00000e1c       0x14 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001000       0x14 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetRTCOscRate
-                0x00000e30       0x14 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001014       0x14 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_GetMainPLLInClockRate
-                0x00000e44       0x10 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001028       0x10 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .text.Chip_Clock_EnablePLL
-                0x00000e54       0x44 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x00000e54                Chip_Clock_EnablePLL
+                0x00001038       0x44 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001038                Chip_Clock_EnablePLL
  .text.Chip_Clock_DisablePLL
-                0x00000e98       0x48 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x00000e98                Chip_Clock_DisablePLL
+                0x0000107c       0x48 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x0000107c                Chip_Clock_DisablePLL
  .text.Chip_Clock_SetupPLL
-                0x00000ee0       0x5c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x00000ee0                Chip_Clock_SetupPLL
+                0x000010c4       0x5c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x000010c4                Chip_Clock_SetupPLL
  .text.Chip_Clock_EnablePeriphClock
-                0x00000f3c       0x34 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x00000f3c                Chip_Clock_EnablePeriphClock
+                0x00001120       0x34 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001120                Chip_Clock_EnablePeriphClock
  .text.Chip_Clock_GetCPUClockSource
-                0x00000f70       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x00000f70                Chip_Clock_GetCPUClockSource
+                0x00001154       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001154                Chip_Clock_GetCPUClockSource
  .text.Chip_Clock_SetCPUClockDiv
-                0x00000f94       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x00000f94                Chip_Clock_SetCPUClockDiv
+                0x00001178       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001178                Chip_Clock_SetCPUClockDiv
  .text.Chip_Clock_GetCPUClockDiv
-                0x00000fb4       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x00000fb4                Chip_Clock_GetCPUClockDiv
+                0x00001198       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001198                Chip_Clock_GetCPUClockDiv
  .text.Chip_Clock_GetPCLKDiv
-                0x00000fd0       0x8c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x00000fd0                Chip_Clock_GetPCLKDiv
+                0x000011b4       0x8c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x000011b4                Chip_Clock_GetPCLKDiv
  .text.Chip_Clock_GetSYSCLKRate
-                0x0000105c       0x34 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000105c                Chip_Clock_GetSYSCLKRate
+                0x00001240       0x34 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001240                Chip_Clock_GetSYSCLKRate
  .text.Chip_Clock_GetMainPLLOutClockRate
-                0x00001090       0x54 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x00001090                Chip_Clock_GetMainPLLOutClockRate
+                0x00001274       0x54 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001274                Chip_Clock_GetMainPLLOutClockRate
  .text.Chip_Clock_GetMainClockRate
-                0x000010e4       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x000010e4                Chip_Clock_GetMainClockRate
+                0x000012c8       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x000012c8                Chip_Clock_GetMainClockRate
  .text.Chip_Clock_GetSystemClockRate
-                0x0000110c       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x0000110c                Chip_Clock_GetSystemClockRate
+                0x000012f0       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x000012f0                Chip_Clock_GetSystemClockRate
  .text.Chip_Clock_GetPeripheralClockRate
-                0x00001124       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
-                0x00001124                Chip_Clock_GetPeripheralClockRate
+                0x00001308       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00001308                Chip_Clock_GetPeripheralClockRate
  .text.Chip_IOCON_PinMuxSet
-                0x0000114c       0x38 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
-                0x0000114c                Chip_IOCON_PinMuxSet
+                0x00001330       0x38 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x00001330                Chip_IOCON_PinMuxSet
  .text.Chip_IOCON_PinMux
-                0x00001184       0x94 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
-                0x00001184                Chip_IOCON_PinMux
+                0x00001368       0x94 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x00001368                Chip_IOCON_PinMux
  .text.Chip_IOCON_SetPinMuxing
-                0x00001218       0x64 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
-                0x00001218                Chip_IOCON_SetPinMuxing
+                0x000013fc       0x64 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x000013fc                Chip_IOCON_SetPinMuxing
  .text.RingBuffer_GetCount
-                0x0000127c       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+                0x00001460       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
  .text.RingBuffer_IsFull
-                0x0000129c       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+                0x00001480       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
  .text.RingBuffer_IsEmpty
-                0x000012c4       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+                0x000014a8       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
  .text.RingBuffer_Insert
-                0x000012ec       0x5c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
-                0x000012ec                RingBuffer_Insert
+                0x000014d0       0x5c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+                0x000014d0                RingBuffer_Insert
  .text.RingBuffer_Pop
-                0x00001348       0x5c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
-                0x00001348                RingBuffer_Pop
+                0x0000152c       0x5c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+                0x0000152c                RingBuffer_Pop
  .text.Chip_Clock_IsMainPLLEnabled
-                0x000013a4       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00001588       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_IsMainPLLLocked
-                0x000013c8       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x000015ac       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_IsMainPLLConnected
-                0x000013ec       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x000015d0       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_EnableCrystal
-                0x00001410       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x000015f4       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_IsCrystalEnabled
-                0x00001430       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00001614       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_Clock_SetMainPLLSource
-                0x00001454       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00001638       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .text.Chip_SetupXtalClocking
-                0x00001474       0x90 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
-                0x00001474                Chip_SetupXtalClocking
+                0x00001658       0x90 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00001658                Chip_SetupXtalClocking
  .text.RingBuffer_IsEmpty
-                0x00001504       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000016e8       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_SendByte
-                0x0000152c       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001710       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_ReadByte
-                0x00001548       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000172c       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_IntDisable
-                0x00001560       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001744       0x24 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_ReadIntIDReg
-                0x00001584       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001768       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_SetupFIFOS
-                0x0000159c       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001780       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_ConfigData
-                0x000015b8       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x0000179c       0x1c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_EnableDivisorAccess
-                0x000015d4       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000017b8       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_DisableDivisorAccess
-                0x000015f4       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000017d8       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_SetDivisorLatches
-                0x00001614       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000017f8       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_ReadLineStatus
-                0x0000163c       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001820       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_SetAutoBaudReg
-                0x00001654       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001838       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_GetClockIndex
-                0x00001674       0x50 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001858       0x50 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_ABIntHandler
-                0x000016c4       0x6c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000018a8       0x6c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_GetClkIndex
-                0x00001730       0x50 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001914       0x50 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .text.Chip_UART_Init
-                0x00001780       0x78 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x00001780                Chip_UART_Init
+                0x00001964       0x78 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001964                Chip_UART_Init
  .text.Chip_UART_TXEnable
-                0x000017f8       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x000017f8                Chip_UART_TXEnable
+                0x000019dc       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000019dc                Chip_UART_TXEnable
  .text.Chip_UART_TXDisable
-                0x00001810       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x00001810                Chip_UART_TXDisable
+                0x000019f4       0x18 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000019f4                Chip_UART_TXDisable
  .text.Chip_UART_SetBaud
-                0x00001828       0x64 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x00001828                Chip_UART_SetBaud
+                0x00001a0c       0x64 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001a0c                Chip_UART_SetBaud
  .text.Chip_UART_RXIntHandlerRB
-                0x0000188c       0x3c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x0000188c                Chip_UART_RXIntHandlerRB
+                0x00001a70       0x3c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001a70                Chip_UART_RXIntHandlerRB
  .text.Chip_UART_TXIntHandlerRB
-                0x000018c8       0x40 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x000018c8                Chip_UART_TXIntHandlerRB
+                0x00001aac       0x40 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001aac                Chip_UART_TXIntHandlerRB
  .text.Chip_UART_IRQRBHandler
-                0x00001908       0x4c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
-                0x00001908                Chip_UART_IRQRBHandler
- .text.memcpy   0x00001954        0x4 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
-                0x00001954                memcpy
+                0x00001aec       0x4c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00001aec                Chip_UART_IRQRBHandler
+ .text.memcpy   0x00001b38        0x4 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
+                0x00001b38                memcpy
  .text.__weak_main
-                0x00001958        0x4 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
-                0x00001958                __weak_main
-                0x00001958                __main
+                0x00001b3c        0x4 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+                0x00001b3c                __weak_main
+                0x00001b3c                __main
  .text.__aeabi_memcpy
-                0x0000195c       0x34 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libcr_eabihelpers.a(memcpy.o)
-                0x0000195c                __aeabi_memcpy
-                0x00001966                __aeabi_memcpy8
-                0x00001966                __aeabi_memcpy4
+                0x00001b40       0x34 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libcr_eabihelpers.a(memcpy.o)
+                0x00001b40                __aeabi_memcpy
+                0x00001b4a                __aeabi_memcpy8
+                0x00001b4a                __aeabi_memcpy4
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.OscRateIn
-                0x00001990        0x4 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00001990                OscRateIn
+                0x00001b74        0x4 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00001b74                OscRateIn
  .rodata.RTCOscRateIn
-                0x00001994        0x4 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
-                0x00001994                RTCOscRateIn
+                0x00001b78        0x4 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00001b78                RTCOscRateIn
  .rodata.pinmuxing
-                0x00001998       0x48 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
-                0x000019e0                . = ALIGN (0x4)
+                0x00001b7c       0x48 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x00001bc4                . = ALIGN (0x4)
 
-.glue_7         0x000019e0        0x0
- .glue_7        0x000019e0        0x0 linker stubs
+.glue_7         0x00001bc4        0x0
+ .glue_7        0x00001bc4        0x0 linker stubs
 
-.glue_7t        0x000019e0        0x0
- .glue_7t       0x000019e0        0x0 linker stubs
+.glue_7t        0x00001bc4        0x0
+ .glue_7t       0x00001bc4        0x0 linker stubs
 
-.vfp11_veneer   0x000019e0        0x0
- .vfp11_veneer  0x000019e0        0x0 linker stubs
+.vfp11_veneer   0x00001bc4        0x0
+ .vfp11_veneer  0x00001bc4        0x0 linker stubs
 
-.v4_bx          0x000019e0        0x0
- .v4_bx         0x000019e0        0x0 linker stubs
+.v4_bx          0x00001bc4        0x0
+ .v4_bx         0x00001bc4        0x0 linker stubs
 
-.iplt           0x000019e0        0x0
- .iplt          0x000019e0        0x0 ./src/GPIO.o
+.iplt           0x00001bc4        0x0
+ .iplt          0x00001bc4        0x0 ./src/GPIO.o
 
-.rel.dyn        0x000019e0        0x0
- .rel.iplt      0x000019e0        0x0 ./src/GPIO.o
+.rel.dyn        0x00001bc4        0x0
+ .rel.iplt      0x00001bc4        0x0 ./src/GPIO.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000019e0                __exidx_start = .
+                0x00001bc4                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000019e0                __exidx_end = .
-                0x000019e0                _etext = .
+                0x00001bc4                __exidx_end = .
+                0x00001bc4                _etext = .
 
-.data_RAM2      0x2007c000        0x0 load address 0x000019e0
+.data_RAM2      0x2007c000        0x0 load address 0x00001bc4
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM2, .)
  *(.ramfunc.$RAM2)
@@ -2554,7 +2544,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x0 load address 0x000019e0
+.data           0x10000000        0x0 load address 0x00001bc4
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -2563,7 +2553,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _edata = .
 
-.igot.plt       0x10000000        0x0 load address 0x000019e0
+.igot.plt       0x10000000        0x0 load address 0x00001bc4
  .igot.plt      0x10000000        0x0 ./src/GPIO.o
 
 .bss_RAM2       0x2007c000        0x0
@@ -2573,49 +2563,53 @@ END GROUP
                 0x2007c000                . = ALIGN ((. != 0x0)?0x4:0x1)
                 [!provide]                PROVIDE (__end_bss_RAM2, .)
 
-.bss            0x10000000       0x50
+.bss            0x10000000       0x58
                 0x10000000                _bss = .
  *(.bss*)
  .bss.usTicks   0x10000000        0x4 ./src/LCD.o
                 0x10000000                usTicks
+ .bss.ledtic    0x10000004        0x4 ./src/LED.o
+                0x10000004                ledtic
+ .bss.LED       0x10000008        0x4 ./src/LED.o
+                0x10000008                LED
  .bss.fIntervalReached
-                0x10000004        0x1 ./src/RTC.o
+                0x1000000c        0x1 ./src/RTC.o
  .bss.fAlarmTimeMatched
-                0x10000005        0x1 ./src/RTC.o
- .bss.On0       0x10000006        0x1 ./src/RTC.o
- *fill*         0x10000007        0x1 
- .bss.Teclas    0x10000008        0x4 ./src/Teclado.o
-                0x10000008                Teclas
+                0x1000000d        0x1 ./src/RTC.o
+ .bss.On0       0x1000000e        0x1 ./src/RTC.o
+ *fill*         0x1000000f        0x1 
+ .bss.Teclas    0x10000010        0x4 ./src/Teclado.o
+                0x10000010                Teclas
  .bss.TeclasAnterior
-                0x1000000c        0x4 ./src/Teclado.o
-                0x1000000c                TeclasAnterior
- .bss.TeclaPresionada
-                0x10000010        0x4 ./src/Teclado.o
-                0x10000010                TeclaPresionada
- .bss.TiempoPresionado
                 0x10000014        0x4 ./src/Teclado.o
-                0x10000014                TiempoPresionado
- .bss.buzz      0x10000018        0x4 ./src/Teclado.o
-                0x10000018                buzz
+                0x10000014                TeclasAnterior
+ .bss.TeclaPresionada
+                0x10000018        0x4 ./src/Teclado.o
+                0x10000018                TeclaPresionada
+ .bss.TiempoPresionado
+                0x1000001c        0x4 ./src/Teclado.o
+                0x1000001c                TiempoPresionado
+ .bss.buzz      0x10000020        0x4 ./src/Teclado.o
+                0x10000020                buzz
  .bss.Presionado
-                0x1000001c        0x1 ./src/Teclado.o
-                0x1000001c                Presionado
+                0x10000024        0x1 ./src/Teclado.o
+                0x10000024                Presionado
  .bss.PresionLarga
-                0x1000001d        0x1 ./src/Teclado.o
-                0x1000001d                PresionLarga
- *fill*         0x1000001e        0x2 
- .bss.txring    0x10000020       0x14 ./src/UART.o
-                0x10000020                txring
- .bss.rxring    0x10000034       0x14 ./src/UART.o
-                0x10000034                rxring
+                0x10000025        0x1 ./src/Teclado.o
+                0x10000025                PresionLarga
+ *fill*         0x10000026        0x2 
+ .bss.txring    0x10000028       0x14 ./src/UART.o
+                0x10000028                txring
+ .bss.rxring    0x1000003c       0x14 ./src/UART.o
+                0x1000003c                rxring
  .bss.ABsyncSts
-                0x10000048        0x1 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x10000050        0x1 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  *(COMMON)
- *fill*         0x10000049        0x3 
- COMMON         0x1000004c        0x4 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
-                0x1000004c                SystemCoreClock
-                0x10000050                . = ALIGN (0x4)
-                0x10000050                _ebss = .
+ *fill*         0x10000051        0x3 
+ COMMON         0x10000054        0x4 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+                0x10000054                SystemCoreClock
+                0x10000058                . = ALIGN (0x4)
+                0x10000058                _ebss = .
                 [!provide]                PROVIDE (end, .)
 
 .noinit_RAM2    0x2007c000        0x0
@@ -2623,191 +2617,202 @@ END GROUP
  *(.noinit.$RamAHB32*)
                 0x2007c000                . = ALIGN (0x4)
 
-.noinit         0x10000050        0x0
-                0x10000050                _noinit = .
+.noinit         0x10000058        0x0
+                0x10000058                _noinit = .
  *(.noinit*)
-                0x10000050                . = ALIGN (0x4)
-                0x10000050                _end_noinit = .
+                0x10000058                . = ALIGN (0x4)
+                0x10000058                _end_noinit = .
                 [!provide]                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x10008000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
                 0xefff74b2                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(demo_lucas_board.axf elf32-littlearm)
 
-.debug_info     0x00000000     0x76db
+.debug_info     0x00000000     0x7afe
  .debug_info    0x00000000      0xcf1 ./src/LCD.o
- .debug_info    0x00000cf1      0x766 ./src/RTC.o
- .debug_info    0x00001457      0xb02 ./src/Teclado.o
- .debug_info    0x00001f59      0xa42 ./src/UART.o
- .debug_info    0x0000299b      0x253 ./src/cr_startup_lpc175x_6x.o
- .debug_info    0x00002bee       0x3f ./src/crp.o
- .debug_info    0x00002c2d      0xd2e ./src/demo_lucas_board.o
- .debug_info    0x0000395b      0x110 ./src/sysinit.o
- .debug_info    0x00003a6b      0xe72 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .debug_info    0x000048dd      0x591 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
- .debug_info    0x00004e6e      0x435 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
- .debug_info    0x000052a3      0xb62 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
- .debug_info    0x00005e05      0x2e9 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
- .debug_info    0x000060ee      0x344 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
- .debug_info    0x00006432      0x439 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
- .debug_info    0x0000686b      0xe70 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+ .debug_info    0x00000cf1      0x410 ./src/LED.o
+ .debug_info    0x00001101      0x766 ./src/RTC.o
+ .debug_info    0x00001867      0xb02 ./src/Teclado.o
+ .debug_info    0x00002369      0xa42 ./src/UART.o
+ .debug_info    0x00002dab      0x253 ./src/cr_startup_lpc175x_6x.o
+ .debug_info    0x00002ffe       0x3f ./src/crp.o
+ .debug_info    0x0000303d      0xd41 ./src/demo_lucas_board.o
+ .debug_info    0x00003d7e      0x110 ./src/sysinit.o
+ .debug_info    0x00003e8e      0xe72 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .debug_info    0x00004d00      0x591 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+ .debug_info    0x00005291      0x435 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+ .debug_info    0x000056c6      0xb62 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+ .debug_info    0x00006228      0x2e9 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+ .debug_info    0x00006511      0x344 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+ .debug_info    0x00006855      0x439 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+ .debug_info    0x00006c8e      0xe70 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
 
-.debug_abbrev   0x00000000     0x1d39
+.debug_abbrev   0x00000000     0x1ed7
  .debug_abbrev  0x00000000      0x286 ./src/LCD.o
- .debug_abbrev  0x00000286      0x232 ./src/RTC.o
- .debug_abbrev  0x000004b8      0x28e ./src/Teclado.o
- .debug_abbrev  0x00000746      0x255 ./src/UART.o
- .debug_abbrev  0x0000099b       0xf5 ./src/cr_startup_lpc175x_6x.o
- .debug_abbrev  0x00000a90       0x36 ./src/crp.o
- .debug_abbrev  0x00000ac6      0x280 ./src/demo_lucas_board.o
- .debug_abbrev  0x00000d46       0xa3 ./src/sysinit.o
- .debug_abbrev  0x00000de9      0x32d C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .debug_abbrev  0x00001116      0x15c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
- .debug_abbrev  0x00001272      0x12b C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
- .debug_abbrev  0x0000139d      0x2ec C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
- .debug_abbrev  0x00001689      0x126 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
- .debug_abbrev  0x000017af      0x12d C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
- .debug_abbrev  0x000018dc      0x175 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
- .debug_abbrev  0x00001a51      0x2e8 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+ .debug_abbrev  0x00000286      0x19e ./src/LED.o
+ .debug_abbrev  0x00000424      0x232 ./src/RTC.o
+ .debug_abbrev  0x00000656      0x28e ./src/Teclado.o
+ .debug_abbrev  0x000008e4      0x255 ./src/UART.o
+ .debug_abbrev  0x00000b39       0xf5 ./src/cr_startup_lpc175x_6x.o
+ .debug_abbrev  0x00000c2e       0x36 ./src/crp.o
+ .debug_abbrev  0x00000c64      0x280 ./src/demo_lucas_board.o
+ .debug_abbrev  0x00000ee4       0xa3 ./src/sysinit.o
+ .debug_abbrev  0x00000f87      0x32d C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .debug_abbrev  0x000012b4      0x15c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+ .debug_abbrev  0x00001410      0x12b C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+ .debug_abbrev  0x0000153b      0x2ec C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+ .debug_abbrev  0x00001827      0x126 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+ .debug_abbrev  0x0000194d      0x12d C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+ .debug_abbrev  0x00001a7a      0x175 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+ .debug_abbrev  0x00001bef      0x2e8 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
 
-.debug_aranges  0x00000000      0x978
+.debug_aranges  0x00000000      0x9e8
  .debug_aranges
                 0x00000000      0x140 ./src/LCD.o
  .debug_aranges
-                0x00000140       0x58 ./src/RTC.o
+                0x00000140       0x70 ./src/LED.o
  .debug_aranges
-                0x00000198      0x128 ./src/Teclado.o
+                0x000001b0       0x58 ./src/RTC.o
  .debug_aranges
-                0x000002c0       0x88 ./src/UART.o
+                0x00000208      0x128 ./src/Teclado.o
  .debug_aranges
-                0x00000348       0x80 ./src/cr_startup_lpc175x_6x.o
+                0x00000330       0x88 ./src/UART.o
  .debug_aranges
-                0x000003c8       0x18 ./src/crp.o
+                0x000003b8       0x80 ./src/cr_startup_lpc175x_6x.o
  .debug_aranges
-                0x000003e0       0x78 ./src/demo_lucas_board.o
+                0x00000438       0x18 ./src/crp.o
  .debug_aranges
-                0x00000458       0x20 ./src/sysinit.o
+                0x00000450       0x78 ./src/demo_lucas_board.o
  .debug_aranges
-                0x00000478      0x158 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x000004c8       0x20 ./src/sysinit.o
  .debug_aranges
-                0x000005d0       0x38 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x000004e8      0x158 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .debug_aranges
-                0x00000608       0x38 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+                0x00000640       0x38 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
  .debug_aranges
-                0x00000640      0x120 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00000678       0x38 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
  .debug_aranges
-                0x00000760       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x000006b0      0x120 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .debug_aranges
-                0x00000790       0x60 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+                0x000007d0       0x30 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
  .debug_aranges
-                0x000007f0       0x60 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x00000800       0x60 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
  .debug_aranges
-                0x00000850      0x128 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x00000860       0x60 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+ .debug_aranges
+                0x000008c0      0x128 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
 
-.debug_ranges   0x00000000      0x870
+.debug_ranges   0x00000000      0x8d0
  .debug_ranges  0x00000000      0x130 ./src/LCD.o
- .debug_ranges  0x00000130       0x48 ./src/RTC.o
- .debug_ranges  0x00000178      0x118 ./src/Teclado.o
- .debug_ranges  0x00000290       0x78 ./src/UART.o
- .debug_ranges  0x00000308       0x70 ./src/cr_startup_lpc175x_6x.o
- .debug_ranges  0x00000378       0x68 ./src/demo_lucas_board.o
- .debug_ranges  0x000003e0       0x10 ./src/sysinit.o
- .debug_ranges  0x000003f0      0x148 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .debug_ranges  0x00000538       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
- .debug_ranges  0x00000560       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
- .debug_ranges  0x00000588      0x110 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
- .debug_ranges  0x00000698       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
- .debug_ranges  0x000006b8       0x50 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
- .debug_ranges  0x00000708       0x50 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
- .debug_ranges  0x00000758      0x118 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+ .debug_ranges  0x00000130       0x60 ./src/LED.o
+ .debug_ranges  0x00000190       0x48 ./src/RTC.o
+ .debug_ranges  0x000001d8      0x118 ./src/Teclado.o
+ .debug_ranges  0x000002f0       0x78 ./src/UART.o
+ .debug_ranges  0x00000368       0x70 ./src/cr_startup_lpc175x_6x.o
+ .debug_ranges  0x000003d8       0x68 ./src/demo_lucas_board.o
+ .debug_ranges  0x00000440       0x10 ./src/sysinit.o
+ .debug_ranges  0x00000450      0x148 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .debug_ranges  0x00000598       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+ .debug_ranges  0x000005c0       0x28 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+ .debug_ranges  0x000005e8      0x110 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+ .debug_ranges  0x000006f8       0x20 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+ .debug_ranges  0x00000718       0x50 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+ .debug_ranges  0x00000768       0x50 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+ .debug_ranges  0x000007b8      0x118 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
 
-.debug_macro    0x00000000     0x29d2
+.debug_macro    0x00000000     0x2bb8
  .debug_macro   0x00000000      0x220 ./src/LCD.o
  .debug_macro   0x00000220       0x70 ./src/LCD.o
  .debug_macro   0x00000290       0xc4 ./src/LCD.o
- .debug_macro   0x00000354      0x1f3 ./src/RTC.o
- .debug_macro   0x00000547       0x22 ./src/RTC.o
- .debug_macro   0x00000569       0x7c ./src/RTC.o
- .debug_macro   0x000005e5      0x229 ./src/Teclado.o
- .debug_macro   0x0000080e       0xe2 ./src/Teclado.o
- .debug_macro   0x000008f0       0x82 ./src/Teclado.o
- .debug_macro   0x00000972      0x234 ./src/UART.o
- .debug_macro   0x00000ba6       0x70 ./src/UART.o
- .debug_macro   0x00000c16       0x22 ./src/UART.o
- .debug_macro   0x00000c38       0x1d ./src/cr_startup_lpc175x_6x.o
- .debug_macro   0x00000c55       0x1a ./src/crp.o
- .debug_macro   0x00000c6f       0x34 ./src/crp.o
- .debug_macro   0x00000ca3      0x293 ./src/demo_lucas_board.o
- .debug_macro   0x00000f36       0x82 ./src/demo_lucas_board.o
- .debug_macro   0x00000fb8       0xc4 ./src/demo_lucas_board.o
- .debug_macro   0x0000107c      0x217 ./src/sysinit.o
- .debug_macro   0x00001293      0x282 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .debug_macro   0x00001515      0x88c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .debug_macro   0x00001da1       0x12 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .debug_macro   0x00001db3      0x217 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
- .debug_macro   0x00001fca      0x1cd C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
- .debug_macro   0x00002197      0x1cd C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
- .debug_macro   0x00002364      0x1cd C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
- .debug_macro   0x00002531       0x83 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
- .debug_macro   0x000025b4       0x74 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
- .debug_macro   0x00002628       0x10 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
- .debug_macro   0x00002638      0x1cd C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
- .debug_macro   0x00002805      0x1cd C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+ .debug_macro   0x00000354      0x1d6 ./src/LED.o
+ .debug_macro   0x0000052a       0x10 ./src/LED.o
+ .debug_macro   0x0000053a      0x1f3 ./src/RTC.o
+ .debug_macro   0x0000072d       0x22 ./src/RTC.o
+ .debug_macro   0x0000074f       0x7c ./src/RTC.o
+ .debug_macro   0x000007cb      0x229 ./src/Teclado.o
+ .debug_macro   0x000009f4       0xe2 ./src/Teclado.o
+ .debug_macro   0x00000ad6       0x82 ./src/Teclado.o
+ .debug_macro   0x00000b58      0x234 ./src/UART.o
+ .debug_macro   0x00000d8c       0x70 ./src/UART.o
+ .debug_macro   0x00000dfc       0x22 ./src/UART.o
+ .debug_macro   0x00000e1e       0x1d ./src/cr_startup_lpc175x_6x.o
+ .debug_macro   0x00000e3b       0x1a ./src/crp.o
+ .debug_macro   0x00000e55       0x34 ./src/crp.o
+ .debug_macro   0x00000e89      0x293 ./src/demo_lucas_board.o
+ .debug_macro   0x0000111c       0x82 ./src/demo_lucas_board.o
+ .debug_macro   0x0000119e       0xc4 ./src/demo_lucas_board.o
+ .debug_macro   0x00001262      0x217 ./src/sysinit.o
+ .debug_macro   0x00001479      0x282 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .debug_macro   0x000016fb      0x88c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .debug_macro   0x00001f87       0x12 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .debug_macro   0x00001f99      0x217 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+ .debug_macro   0x000021b0      0x1cd C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+ .debug_macro   0x0000237d      0x1cd C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+ .debug_macro   0x0000254a      0x1cd C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+ .debug_macro   0x00002717       0x83 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+ .debug_macro   0x0000279a       0x74 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+ .debug_macro   0x0000280e       0x10 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+ .debug_macro   0x0000281e      0x1cd C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+ .debug_macro   0x000029eb      0x1cd C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
 
-.debug_line     0x00000000     0x509c
+.debug_line     0x00000000     0x556b
  .debug_line    0x00000000      0x7e5 ./src/LCD.o
- .debug_line    0x000007e5      0x4e0 ./src/RTC.o
- .debug_line    0x00000cc5      0x76c ./src/Teclado.o
- .debug_line    0x00001431      0x5a7 ./src/UART.o
- .debug_line    0x000019d8       0xd5 ./src/cr_startup_lpc175x_6x.o
- .debug_line    0x00001aad       0x78 ./src/crp.o
- .debug_line    0x00001b25      0x6e3 ./src/demo_lucas_board.o
- .debug_line    0x00002208      0x473 ./src/sysinit.o
- .debug_line    0x0000267b      0x803 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .debug_line    0x00002e7e      0x4b3 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
- .debug_line    0x00003331      0x447 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
- .debug_line    0x00003778      0x6c4 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
- .debug_line    0x00003e3c      0x434 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
- .debug_line    0x00004270      0x247 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
- .debug_line    0x000044b7      0x4be C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
- .debug_line    0x00004975      0x727 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+ .debug_line    0x000007e5      0x4c8 ./src/LED.o
+ .debug_line    0x00000cad      0x4e0 ./src/RTC.o
+ .debug_line    0x0000118d      0x76c ./src/Teclado.o
+ .debug_line    0x000018f9      0x5a7 ./src/UART.o
+ .debug_line    0x00001ea0       0xd5 ./src/cr_startup_lpc175x_6x.o
+ .debug_line    0x00001f75       0x78 ./src/crp.o
+ .debug_line    0x00001fed      0x6ea ./src/demo_lucas_board.o
+ .debug_line    0x000026d7      0x473 ./src/sysinit.o
+ .debug_line    0x00002b4a      0x803 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .debug_line    0x0000334d      0x4b3 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+ .debug_line    0x00003800      0x447 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+ .debug_line    0x00003c47      0x6c4 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+ .debug_line    0x0000430b      0x434 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+ .debug_line    0x0000473f      0x247 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+ .debug_line    0x00004986      0x4be C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+ .debug_line    0x00004e44      0x727 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
 
-.debug_str      0x00000000    0x14345
+.debug_str      0x00000000    0x143d5
  .debug_str     0x00000000    0x11478 ./src/LCD.o
                               0x11590 (size before relaxing)
- .debug_str     0x00011478      0x20d ./src/RTC.o
+ .debug_str     0x00011478       0xa3 ./src/LED.o
+                              0x107c3 (size before relaxing)
+ .debug_str     0x0001151b      0x20d ./src/RTC.o
                               0x10ce0 (size before relaxing)
- .debug_str     0x00011685      0x579 ./src/Teclado.o
+ .debug_str     0x00011728      0x579 ./src/Teclado.o
                               0x116fb (size before relaxing)
- .debug_str     0x00011bfe      0x23e ./src/UART.o
+ .debug_str     0x00011ca1      0x23e ./src/UART.o
                               0x110a6 (size before relaxing)
- .debug_str     0x00011e3c      0x1c2 ./src/cr_startup_lpc175x_6x.o
+ .debug_str     0x00011edf      0x1c2 ./src/cr_startup_lpc175x_6x.o
                                0x26a4 (size before relaxing)
- .debug_str     0x00011ffe       0xe9 ./src/crp.o
+ .debug_str     0x000120a1       0xe9 ./src/crp.o
                                0x25bc (size before relaxing)
- .debug_str     0x000120e7      0xa5c ./src/demo_lucas_board.o
-                              0x11ee3 (size before relaxing)
- .debug_str     0x00012b43       0x1b ./src/sysinit.o
+ .debug_str     0x0001218a      0xa49 ./src/demo_lucas_board.o
+                              0x11ef2 (size before relaxing)
+ .debug_str     0x00012bd3       0x1b ./src/sysinit.o
                               0x109f8 (size before relaxing)
- .debug_str     0x00012b5e      0x961 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .debug_str     0x00012bee      0x961 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
                               0x11558 (size before relaxing)
- .debug_str     0x000134bf      0x22d C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+ .debug_str     0x0001354f      0x22d C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
                               0x10df3 (size before relaxing)
- .debug_str     0x000136ec       0xb1 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+ .debug_str     0x0001377c       0xb1 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
                               0x10839 (size before relaxing)
- .debug_str     0x0001379d      0x628 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+ .debug_str     0x0001382d      0x628 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
                               0x11158 (size before relaxing)
- .debug_str     0x00013dc5       0x79 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+ .debug_str     0x00013e55       0x79 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
                               0x105d5 (size before relaxing)
- .debug_str     0x00013e3e      0x142 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+ .debug_str     0x00013ece      0x142 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
                                0x4027 (size before relaxing)
- .debug_str     0x00013f80       0xc4 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+ .debug_str     0x00014010       0xc4 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
                               0x107bd (size before relaxing)
- .debug_str     0x00014044      0x301 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+ .debug_str     0x000140d4      0x301 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
                               0x10ff0 (size before relaxing)
 
 .comment        0x00000000       0xdc
  .comment       0x00000000       0x6e ./src/LCD.o
                                  0x6f (size before relaxing)
+ .comment       0x0000006e       0x6f ./src/LED.o
  .comment       0x0000006e       0x6f ./src/RTC.o
  .comment       0x0000006e       0x6f ./src/Teclado.o
  .comment       0x0000006e       0x6f ./src/UART.o
@@ -2832,55 +2837,58 @@ OUTPUT(demo_lucas_board.axf elf32-littlearm)
  .ARM.attributes
                 0x00000000       0x33 ./src/LCD.o
  .ARM.attributes
-                0x00000033       0x33 ./src/RTC.o
+                0x00000033       0x33 ./src/LED.o
  .ARM.attributes
-                0x00000066       0x33 ./src/Teclado.o
+                0x00000066       0x33 ./src/RTC.o
  .ARM.attributes
-                0x00000099       0x33 ./src/UART.o
+                0x00000099       0x33 ./src/Teclado.o
  .ARM.attributes
-                0x000000cc       0x33 ./src/cr_startup_lpc175x_6x.o
+                0x000000cc       0x33 ./src/UART.o
  .ARM.attributes
-                0x000000ff       0x33 ./src/crp.o
+                0x000000ff       0x33 ./src/cr_startup_lpc175x_6x.o
  .ARM.attributes
-                0x00000132       0x33 ./src/demo_lucas_board.o
+                0x00000132       0x33 ./src/crp.o
  .ARM.attributes
-                0x00000165       0x33 ./src/sysinit.o
+                0x00000165       0x33 ./src/demo_lucas_board.o
  .ARM.attributes
-                0x00000198       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+                0x00000198       0x33 ./src/sysinit.o
  .ARM.attributes
-                0x000001cb       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+                0x000001cb       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
  .ARM.attributes
-                0x000001fe       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+                0x000001fe       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
  .ARM.attributes
-                0x00000231       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+                0x00000231       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
  .ARM.attributes
-                0x00000264       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+                0x00000264       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
  .ARM.attributes
-                0x00000297       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+                0x00000297       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
  .ARM.attributes
-                0x000002ca       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+                0x000002ca       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
  .ARM.attributes
-                0x000002fd       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+                0x000002fd       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
  .ARM.attributes
-                0x00000330       0x33 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
+                0x00000330       0x33 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
  .ARM.attributes
-                0x00000363       0x33 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+                0x00000363       0x33 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(memcpy.o)
  .ARM.attributes
-                0x00000396       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libcr_eabihelpers.a(memcpy.o)
+                0x00000396       0x33 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(__weak__main.o)
+ .ARM.attributes
+                0x000003c9       0x21 c:/nxp/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libcr_eabihelpers.a(memcpy.o)
 
-.debug_frame    0x00000000     0x23d4
+.debug_frame    0x00000000     0x2558
  .debug_frame   0x00000000      0x54c ./src/LCD.o
- .debug_frame   0x0000054c      0x130 ./src/RTC.o
- .debug_frame   0x0000067c      0x47c ./src/Teclado.o
- .debug_frame   0x00000af8      0x20c ./src/UART.o
- .debug_frame   0x00000d04      0x170 ./src/cr_startup_lpc175x_6x.o
- .debug_frame   0x00000e74      0x1a0 ./src/demo_lucas_board.o
- .debug_frame   0x00001014       0x34 ./src/sysinit.o
- .debug_frame   0x00001048      0x5b0 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
- .debug_frame   0x000015f8       0x8c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
- .debug_frame   0x00001684       0x88 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
- .debug_frame   0x0000170c      0x490 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
- .debug_frame   0x00001b9c       0x80 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
- .debug_frame   0x00001c1c      0x164 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
- .debug_frame   0x00001d80      0x12c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
- .debug_frame   0x00001eac      0x528 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)
+ .debug_frame   0x0000054c      0x188 ./src/LED.o
+ .debug_frame   0x000006d4      0x130 ./src/RTC.o
+ .debug_frame   0x00000804      0x47c ./src/Teclado.o
+ .debug_frame   0x00000c80      0x20c ./src/UART.o
+ .debug_frame   0x00000e8c      0x170 ./src/cr_startup_lpc175x_6x.o
+ .debug_frame   0x00000ffc      0x19c ./src/demo_lucas_board.o
+ .debug_frame   0x00001198       0x34 ./src/sysinit.o
+ .debug_frame   0x000011cc      0x5b0 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board.o)
+ .debug_frame   0x0000177c       0x8c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_board_nxp_lpcxpresso_1769\Debug\liblpc_board_nxp_lpcxpresso_1769.a(board_sysinit.o)
+ .debug_frame   0x00001808       0x88 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(chip_17xx_40xx.o)
+ .debug_frame   0x00001890      0x490 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(clock_17xx_40xx.o)
+ .debug_frame   0x00001d20       0x80 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(iocon_17xx_40xx.o)
+ .debug_frame   0x00001da0      0x164 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(ring_buffer.o)
+ .debug_frame   0x00001f04      0x12c C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(sysinit_17xx_40xx.o)
+ .debug_frame   0x00002030      0x528 C:\Users\Manuel Guerrero\TD2\Workspace\lpc_chip_175x_6x\Debug\liblpc_chip_175x_6x.a(uart_17xx_40xx.o)

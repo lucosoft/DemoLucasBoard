@@ -8,7 +8,7 @@
 #ifndef LED_H_
 #define LED_H_
 
-#define 	LEDTIC 		500 /* Tiempo de parpadeo*/
+#define 	LEDTIC 		1000 /* Tiempo de parpadeo*/
 
 
 
