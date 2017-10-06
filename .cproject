@@ -38,9 +38,9 @@
 								<option id="com.crt.advproject.gcc.specs.313013168" name="Specs" superClass="com.crt.advproject.gcc.specs" value="com.crt.advproject.gcc.specs.codered" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.307857898" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lpc_board_nxp_lpcxpresso_1769/inc}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_lucas_board/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lpc_chip_175x_6x/inc}&quot;"/>
 								</option>
+								<option id="gnu.c.compiler.option.preprocessor.undef.symbol.381512065" name="Undefined symbols (-U)" superClass="gnu.c.compiler.option.preprocessor.undef.symbol"/>
 								<inputType id="com.crt.advproject.compiler.input.1998593297" superClass="com.crt.advproject.compiler.input"/>
 							</tool>
 							<tool id="com.crt.advproject.gas.exe.debug.708298242" name="MCU Assembler" superClass="com.crt.advproject.gas.exe.debug">
@@ -73,12 +73,10 @@
 								<option id="gnu.c.link.option.libs.971001205" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="lpc_board_nxp_lpcxpresso_1769"/>
 									<listOptionValue builtIn="false" value="lpc_chip_175x_6x"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="lib_lucas_board"/>
 								</option>
 								<option id="gnu.c.link.option.paths.389200814" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lpc_board_nxp_lpcxpresso_1769/Debug}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lpc_chip_175x_6x/Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lib_lucas_board/Debug}&quot;"/>
 								</option>
 								<option id="com.crt.advproject.link.crpenable.1816356119" name="Enable Code Read Protection" superClass="com.crt.advproject.link.crpenable" value="true" valueType="boolean"/>
 								<option id="com.crt.advproject.link.gcc.multicore.slave.980300012" name="Multicore configuration" superClass="com.crt.advproject.link.gcc.multicore.slave"/>
