@@ -29,14 +29,14 @@ all: demo_lucas_board.axf
 demo_lucas_board.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"C:\Users\Manuel Guerrero\TD2\WorkspaceTest2\lpc_board_nxp_lpcxpresso_1769\Debug" -L"C:\Users\Manuel Guerrero\TD2\WorkspaceTest2\lpc_chip_175x_6x\Debug" -Xlinker -Map="demo_lucas_board.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "demo_lucas_board_Debug.ld" -o "demo_lucas_board.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"C:\Datos\RepoLocal\lpc_board_nxp_lpcxpresso_1769\Debug" -L"C:\Datos\RepoLocal\lpc_chip_175x_6x\Debug" -Xlinker -Map="demo_lucas_board.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "demo_lucas_board_Debug.ld" -o "demo_lucas_board.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) demo_lucas_board.axf
+	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) demo_lucas_board.axf
 	-@echo ' '
 
 post-build:
