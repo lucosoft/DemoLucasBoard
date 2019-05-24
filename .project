@@ -3,7 +3,6 @@
 	<name>demo_lucas_board</name>
 	<comment></comment>
 	<projects>
-		<project>lib_lucas_board</project>
 		<project>lpc_board_nxp_lpcxpresso_1769</project>
 		<project>lpc_chip_175x_6x</project>
 	</projects>
